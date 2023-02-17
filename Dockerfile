@@ -13,6 +13,13 @@ ENV HASURA_GRAPHQL_METADATA_DATABASE_EXTENSIONS_SCHEMA=heroku_ext
 # https://devcenter.heroku.com/articles/heroku-postgres-plans#hobby-tier
 ENV HASURA_GRAPHQL_PG_CONNECTIONS=15
 
+# Auto transform to GraphQL standard
+ENV HASURA_GRAPHQL_EXPERIMENTAL_FEATURES=true
+ENV HASURA_GRAPHQL_DEFAULT_NAMING_CONVENTION=graphql-default
+
+# Default role
+ENV HASURA_GRAPHQL_UNAUTHORIZED_ROLE=anonymous
+
 CMD HASURA_GRAPHQL_METADATA_DATABASE_URL=$DATABASE_URL graphql-engine \
     serve \
     --server-port $PORT
