@@ -22,7 +22,10 @@
   "stack": "container",
   "addons": [
     {
-      "plan": "heroku-postgresql:mini"
+      "plan": "heroku-postgresql:mini",
+      "options": {
+        "version": "15.1"
+      }
     }
   ]
 }
