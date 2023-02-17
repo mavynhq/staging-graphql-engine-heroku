@@ -24,7 +24,7 @@
     {
       "plan": "heroku-postgresql:mini",
       "options": {
-        "version": "15.1"
+        "version": "15"
       }
     }
   ]
